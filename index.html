@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notepad App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My Notepad</h1>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Search notes...">
+      <button id="searchBtn">Search</button>
+      <button id="clearSearchBtn">Clear</button>
+    </div>
+
+    <!-- Editor -->
+    <div class="editor">
+      <div id="highlightLayer"></div>
+      <textarea id="note" placeholder="Start writing your notes here..."></textarea>
+    </div>
+
+    <!-- Counter -->
+    <div class="counter">
+      <span id="wordCount">Words: 0</span> | 
+      <span id="charCount">Characters: 0</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="saveBtn">💾 Save</button>
+      <button id="clearBtn">🧹 Clear</button>
+      <button id="downloadBtn">⬇ Download</button>
+      <button id="modeToggle">🌗 Toggle Mode</button>
+    </div>
+
+    <!-- Status Message -->
+    <p id="statusMsg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* ====================
+   GENERAL STYLING
+==================== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.5s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
+}
+
+/* ====================
+   CONTAINER
+==================== */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  animation: slideDown 0.8s ease;
+}
+
+/* ====================
+   SEARCH BOX
+==================== */
+.search-box {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #764ba2;
+  color: #fff;
+}
+
+/* ====================
+   EDITOR
+==================== */
+.editor {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+#highlightLayer,
+textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Highlight Layer */
+#highlightLayer {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: transparent;
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+/* Highlight effect */
+mark {
+  background: yellow;
+  color: black;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* Textarea */
+textarea {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  resize: none;
+  outline: none;
+  border: none;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+body.dark textarea {
+  background: rgba(0, 0, 0, 0.6);
+  color: #eee;
+}
+
+/* ====================
+   COUNTER
+==================== */
+.counter {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* ====================
+   BUTTONS
+==================== */
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeUp 1s ease;
+}
+
+button:hover {
+  background: #764ba2;
+  color: #fff;
+  transform: scale(1.08) rotate(-1deg);
+}
+
+body.dark button {
+  background: #333;
+  color: #eee;
+}
+
+body.dark button:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+/* ====================
+   STATUS MESSAGE
+==================== */
+#statusMsg {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00ff99;
+  transition: opacity 0.5s ease;
+}
+
+/* ====================
+   ANIMATIONS
+==================== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
